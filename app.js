@@ -4,9 +4,9 @@ window.onload = PageLoader;
 window.onkeydown = keydown;
 window.onkeyup = keyup;
 
-let startRu = localStorage.getItem('startRu');
+let startRu = sessionStorage.getItem('startRu');
 startRu=JSON.parse(startRu);
-let startCa = localStorage.getItem('startCa');
+let startCa = sessionStorage.getItem('startCa');
 startCa=JSON.parse(startCa);
 
 let RuLang = startRu;
@@ -37,9 +37,9 @@ function PageLoader() {
 function keydown(e) {
 
 let starupRu = RuLang;
-localStorage.setItem('startRu',JSON.stringify(starupRu));
+sessionStorage.setItem('startRu',JSON.stringify(starupRu));
 let starupCa = Caps_Lock;
-localStorage.setItem('startCa',JSON.stringify(starupCa));
+sessionStorage.setItem('startCa',JSON.stringify(starupCa));
 
 
   const textArea = document.querySelector('textarea');
@@ -114,9 +114,9 @@ function keyup(e) {
 document.addEventListener('mousedown', function (e) {
 
   let starupRu = RuLang;
-  localStorage.setItem('startRu',JSON.stringify(starupRu));
+  sessionStorage.setItem('startRu',JSON.stringify(starupRu));
   let starupCa = Caps_Lock;
-  localStorage.setItem('startCa',JSON.stringify(starupCa));
+  sessionStorage.setItem('startCa',JSON.stringify(starupCa));
 
 
 
