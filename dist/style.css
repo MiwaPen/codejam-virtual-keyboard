@@ -21,6 +21,10 @@ button{
     font-weight: bold;
 }
 
+button:focus{
+    outline: none;
+}
+
 .SpecSized{
     width: auto;
 }

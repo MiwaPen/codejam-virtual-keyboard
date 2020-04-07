@@ -5,15 +5,22 @@ function KeyBoardLoader(RuLang, Caps_Lock) {
     if (document.querySelector('h1')) {
         document.querySelector('h1').remove();
     }
+    if (document.querySelector('h2')) {
+        document.querySelector('h2').remove();
+    }
     const LangInfo = document.createElement('h1');
+    const F5 = document.createElement('h2');
     if (RuLang) {
         RuKeyboard(Caps_Lock, keyBoardMap);
         LangInfo.textContent = "Смена языка SHIFT+ALT!";
+        F5.textContent = "F5 для перезагрузки страницы";
     } else {
         EnKeyboard(Caps_Lock, keyBoardMap);
         LangInfo.textContent = "Press SHIFT+ALT to change language!";
+        F5.textContent = "Press F5 to reload this page";
     }
     document.body.appendChild(LangInfo);
+    document.body.appendChild(F5);
 }
 
 module.exports = KeyBoardLoader;
